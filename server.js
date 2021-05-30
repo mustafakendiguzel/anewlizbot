@@ -4,10 +4,7 @@ const Discord=require("discord.js");
 let client = new Discord.Client();
 const prefix = "&";
 
-const port = process.env.PORT || 4000; // PORT must be in caps
-app.listen(port, () => {
- console.info("Server started listening.");
-});
+
 
 client.on("ready", () => console.log("Larei was here!"));//Bot aktif olunca, konsola yazılcak mesaj. Tırnak içindeki yazıyı değiştirebilirsiniz.
 client.on("warn", console.warn);
