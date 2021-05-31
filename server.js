@@ -67,7 +67,7 @@ var dizi1 = ["Sabah yürek yemiş buraya gelmiş!",
     "Zinadan kaçın diyor kaçın!",
     "Allah versin kardeşim!",
     "Keşke bu arkadaşa bir şey yedirip, içirmeseydik!",
-    "Ver coşkuyu kolonlar inlesin.",a
+    "Ver coşkuyu kolonlar inlesin.",
     "Bizi böyle gördünüz Karamürsel Sepetimi Sandınız?",
     "Hayırdır İngiltere Prensi’yle mi konuşuyorum?",
     "Koyunda güzel bir ismimiz olsun.",
@@ -147,11 +147,9 @@ client.on("message",message =>{
   if (cmd === 'whatk') {
     message.reply(message.author.displayAvatarURL());
   }
-  if (cmd === 'son') {
-   
-    
-  }  
-  
+  if(cmd==='miqky') {
+    message.channel.send("SELAM")
+  }
  })
 
 client.login("ODM1NDgxMDQ2MjA3NTYxNzY4.YIQEWw.CxweRR9hRW6k0pQviE8jsH27iEc");
