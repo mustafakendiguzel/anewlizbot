@@ -67,7 +67,7 @@ var dizi1 = ["Sabah yürek yemiş buraya gelmiş!",
     "Zinadan kaçın diyor kaçın!",
     "Allah versin kardeşim!",
     "Keşke bu arkadaşa bir şey yedirip, içirmeseydik!",
-    "Ver coşkuyu kolonlar inlesin.",
+    "Ver coşkuyu kolonlar inlesin.",a
     "Bizi böyle gördünüz Karamürsel Sepetimi Sandınız?",
     "Hayırdır İngiltere Prensi’yle mi konuşuyorum?",
     "Koyunda güzel bir ismimiz olsun.",
