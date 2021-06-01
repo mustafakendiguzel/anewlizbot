@@ -20,7 +20,7 @@ client.on("message", async message => {
     if (cmd === "ping") return message.channel.send(`Pong! \`${client.ws.ping}ms\``);
 
     if (cmd === "youtube") {
-        const channel = message.mentions.channels.first() || message.guild.channels.cache.get(channel);
+        const channel = message.mentions.channels.first() || message.guild.channels.cache.get(channel.author.id);
         if (!channel || channel.type !== "voice") return message.channel.send("**Hata, lütfen `.izle <sesli_kanal_id>` şeklinde kullanınız.**");
         if (!channel.permissionsFor(message.guild.me).has("CREATE_INSTANT_INVITE")) return message.channel.send("**Hata, 'Davet Oluştur' yetkisi bulunamadı.**");
 
