@@ -124,7 +124,7 @@ client.on("message",message =>{
     message.channel.send(`---------------map: ${map[0]}----------------
 -------Takım1----- |------Takım2------
     ${kisiler[0]}  |   ${kisiler[5]}
-    ${kisiler[1]}  |   ${kisiler[6]
+    ${kisiler[1]}  |   ${kisiler[6]}
     ${kisiler[2]}  |   ${kisiler[7]}
     ${kisiler[3]}  |   ${kisiler[8]}
     ${kisiler[4]}  |   ${kisiler[9]}
