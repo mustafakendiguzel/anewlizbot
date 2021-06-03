@@ -160,8 +160,8 @@ client.on("message",message =>{
   if (cmd === 'whatk') {
     message.reply(message.author.displayAvatarURL());
   }
-  if(cmd==='damla') {
-    message.channel.send("damla")
+  if(cmd==='yamur') {
+    message.channel.send("Brahmanınızın biricik biraderi :p ")
   }
  })
 
