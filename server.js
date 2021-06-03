@@ -115,7 +115,7 @@ client.on("message",message =>{
     
     if(cmd==='rastgelemap') {
     karistir(map)
-    message.channel.send(`Seçilen map: ${map}`)
+    message.channel.send(`Seçilen map: ${map[0]}`)
     
    }
 
