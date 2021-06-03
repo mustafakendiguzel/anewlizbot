@@ -112,6 +112,10 @@ client.on("message",message =>{
     message.channel.send(`Her tokat fatike bir teselli,tokat sayisi: ${s}`)
     s+=1
    }
+   if(cmd==='purge') {
+    message.channel.send(`?purge 3`)
+ 
+   }
     
     if(cmd==='map') {
     karistir(map)
