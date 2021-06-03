@@ -2,7 +2,7 @@ require("dotenv").config();
 const fetch = require("node-fetch");
 const Discord=require("discord.js");
 let client = new Discord.Client();
-const prefix = "@";
+const prefix = "&";
 
 
 
