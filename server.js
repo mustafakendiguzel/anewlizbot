@@ -2,7 +2,7 @@ require("dotenv").config();
 const fetch = require("node-fetch");
 const Discord=require("discord.js");
 let client = new Discord.Client();
-const prefix = "&";
+const prefix = "@";
 
 
 
@@ -94,7 +94,8 @@ var kutup = {"&karayan":"Ya tarih yazıcaz ya tarih olucaz!",
 "&muti":"Bu film çok güzel agaa",             
 };
 
-let map = ["ascent","breeze","bind","split","haven","icebox"]
+let map = ["ascent","breeze","bind","split","haven","icebox"];
+let kisiler = ["muti","sudiş","damla","karahan","zeynep","rümeysa","fatih","doğukan","yağmur","cenkay"];
 let s = 0;
 let ks = 0;
 client.on("message",message =>{
@@ -117,20 +118,21 @@ client.on("message",message =>{
  
    }
     
-    if(cmd==='map') {
-    karistir(map)
-    message.channel.send(`Seçilen map: ${map[0]}`)
-    
+    if(cmd==='valo') {
+    karistir(map);
+    karistir(kisiler);
+    message.channel.send(`---------------map: ${map[0]}----------------
+                          -------Takım1-------- |--------Takım2-------- `)
+                          -----${kisiler[0]}----|----${kisiler[5]}-----
+                          -----${kisiler[1]}----|----${kisiler[6]}-----
+                          -----${kisiler[2]}----|----${kisiler[7]}-----
+                          -----${kisiler[3]}----|----${kisiler[8]}-----
+                          -----${kisiler[4]}----|----${kisiler[9]}-----  
+   };
+      if(cmd==='valo') {
+    message.channel.send(`---------`);
    }
 
-  if(cmd==='fatikeopucuk') {
-    message.channel.send(`Her opucuk fatike bir teselli,opucuk sayisi: ${ks}`)
-    ks+=1
-   }
-  if(cmd==='15temmuzdanerdeydin') {
-    message.channel.send(`15 Temmuzda nerdeydin lan ?!!`)
-  
-   }
   
    let yazankisi = message.author.username;
 
@@ -138,6 +140,14 @@ client.on("message",message =>{
     let mesaj = args.join(" ")
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
+    
+
+    if(cmd==='acil') {
+    let mesaj = args.join(" ")
+    allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
+   }
+
+    
    
    let j = 1;
    let argumans = []; 
@@ -160,7 +170,9 @@ client.on("message",message =>{
   if (cmd === 'whatk') {
     message.reply(message.author.displayAvatarURL());
   }
-    
+  if(cmd==='yamur') {
+    message.channel.send("Brahmanınızın biricik biraderi :p ")
+  }
  })
 
 client.login("ODM1NDgxMDQ2MjA3NTYxNzY4.YIQEWw.CxweRR9hRW6k0pQviE8jsH27iEc");
