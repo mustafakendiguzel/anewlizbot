@@ -114,8 +114,9 @@ client.on("message",message =>{
    }
     
     if(cmd==='rastgelemap') {
-    message.channel.send(`Seçilen map: ${karistir(map)}`)
-    s+=1
+    karistir(map)
+    message.channel.send(`Seçilen map: ${map}`)
+    
    }
 
   if(cmd==='fatikeopucuk') {
