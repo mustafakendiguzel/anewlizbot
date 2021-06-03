@@ -93,6 +93,8 @@ var kutup = {"&karayan":"Ya tarih yazıcaz ya tarih olucaz!",
 "&zenoras":"Ben genshine kaçıyom",
 "&muti":"Bu film çok güzel agaa",             
 };
+
+let map = ["ascent","breeze","bind","split","heaven","icebox"]
 let s = 0;
 let ks = 0;
 client.on("message",message =>{
@@ -108,6 +110,11 @@ client.on("message",message =>{
 
    if(cmd==='fatiketokat') {
     message.channel.send(`Her tokat fatike bir teselli,tokat sayisi: ${s}`)
+    s+=1
+   }
+    
+    if(cmd==='rastgelemap') {
+    message.channel.send(`Seçilen map: ${karistir(map)}`)
     s+=1
    }
 
