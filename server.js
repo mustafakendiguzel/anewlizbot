@@ -94,7 +94,7 @@ var kutup = {"&karayan":"Ya tarih yazıcaz ya tarih olucaz!",
 "&muti":"Bu film çok güzel agaa",             
 };
 
-let map = ["ascent","breeze","bind","split","heaven","icebox"]
+let map = ["ascent","breeze","bind","split","haven","icebox"]
 let s = 0;
 let ks = 0;
 client.on("message",message =>{
@@ -113,7 +113,7 @@ client.on("message",message =>{
     s+=1
    }
     
-    if(cmd==='rastgelemap') {
+    if(cmd==='map') {
     karistir(map)
     message.channel.send(`Seçilen map: ${map[0]}`)
     
