@@ -160,9 +160,7 @@ client.on("message",message =>{
   if (cmd === 'whatk') {
     message.reply(message.author.displayAvatarURL());
   }
-  if(cmd==='yamur') {
-    message.channel.send("Brahmanınızın biricik biraderi :p ")
-  }
+    
  })
 
 client.login("ODM1NDgxMDQ2MjA3NTYxNzY4.YIQEWw.CxweRR9hRW6k0pQviE8jsH27iEc");
