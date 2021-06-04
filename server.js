@@ -162,8 +162,10 @@ client.on("message",message =>{
        sent.awaitReactions(red, { time: 5000 })
       .then(collected2 => redsys += collected2.size)
       .catch(console.error)
+
+      console.log("calisti");
       }
-    setTimeout(merhaba, 5100).then(console.log(kblsys));
+    setTimeout(merhaba, 5100)
    }
 
 
