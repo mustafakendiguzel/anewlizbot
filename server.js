@@ -1,5 +1,6 @@
 require("dotenv").config();
-
+var sprintf = require('sprintf-js').sprintf,
+vsprintf = require('sprintf-js').vsprintf
 
 const fetch = require("node-fetch");
 const Discord=require("discord.js");
@@ -133,23 +134,8 @@ client.on("message",message =>{
     -------------------------------------|
 
        `);
-       const data = [
-         ['0A', '0B', '0C'],
-         ['1A', '1B', '1C'],
-         ['2A', '2B', '2C'],
-       ];
-
-   const config = {
-     columnDefault: {
-       width: 10,
-     },
-     header: {
-       alignment: 'center',
-       content: 'THE HEADER\nThis is the table about something',
-     },
-   }
-
-   console.log(table(data, config));
+     sprintf('%2$s %3$s a %1$s', 'cracker', 'Polly', 'wants')
+     vsprintf('The first 4 letters of the english alphabet are: %s, %s, %s and %s', ['a', 'b', 'c', 'd'])
     }
 
 
