@@ -148,8 +148,7 @@ client.on("message",message =>{
     sent.react('✅');
     sent.react('❌');
     reactions = sent.reactions.cache;
-    if (reactions.get('✅')) {
-      console.log(`mrb`);
+    console.log(`${reactions.get('✅')}`)
     }
 
 });
