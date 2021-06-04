@@ -134,8 +134,12 @@ client.on("message",message =>{
     -------------------------------------|
 
        `);
-     console.log(sprintf('%2$s %3$s a %1$s', 'cracker', 'Polly', 'wants'))
-     vsprintf('The first 4 letters of the english alphabet are: %s, %s, %s and %s', ['a', 'b', 'c', 'd'])
+       var users = [
+      {name: 'Dolly'},
+      {name: 'Molly'},
+      {name: 'Polly'},
+  ]
+   sprintf('Hello %(users[0].name)s, %(users[1].name)s and %(users[2].name)s', {users: users}) // Hello Dolly, Molly and Polly
     }
 
 
