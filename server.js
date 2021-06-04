@@ -142,6 +142,9 @@ client.on("message",message =>{
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
+   if (cmd === 'react') {
+   message.react('😄');
+ }
 
    let j = 1;
    let argumans = [];
