@@ -145,7 +145,8 @@ client.on("message",message =>{
    if (cmd === 'react') {
     console.log(args.join(" "));
     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
-    sent.react(':white_check_mark:',':x:');
+    sent.react(':white_check_mark:');
+    
 });
  }
 
