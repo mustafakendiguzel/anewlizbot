@@ -133,7 +133,6 @@ client.on("message",message =>{
     }
 
     if(cmd==='oy') {
-     message.channel.send("Oylama başladı");
      message.react('396548322053062656');
 
     }
