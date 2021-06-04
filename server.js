@@ -167,12 +167,6 @@ client.on("message",message =>{
       }
     setTimeout(merhaba, 5100)
    }
-
-
-
-
-
-});
  }
 
 
