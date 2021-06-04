@@ -147,7 +147,7 @@ client.on("message",message =>{
     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
-  })
+
     let kblsys = 0;
     let redsys = 0;
     const kbl = (reaction, user) => reaction.emoji.name === '✅'
@@ -161,6 +161,7 @@ client.on("message",message =>{
     sent.awaitReactions(red, { time: 5000 })
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
+     })
  }
 
 
