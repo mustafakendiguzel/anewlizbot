@@ -153,18 +153,21 @@ client.on("message",message =>{
     const kbl = (reaction, user) => reaction.emoji.name === '✅'
     const red = (reaction, user) => reaction.emoji.name === '❌'
 
-    setTimeout(function() {
 
-     sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => kblsys += collected.size)
-    .catch(console.error);
+    function merhaba(){
+        sent.awaitReactions(kbl, { time: 5000 })
+       .then(collected => kblsys += collected.size)
+       .catch(console.error);
 
-
-    sent.awaitReactions(red, { time: 5000 })
-   .then(collected2 => redsys += collected2.size)
-   .catch(console.error)
+       sent.awaitReactions(red, { time: 5000 })
+      .then(collected2 => redsys += collected2.size)
+      .catch(console.error)
+      }
+    setTimeout(merhaba, 5100).then(console.log(kblsys));
    }
-  , 5100).then(console.log(kblsys));
+
+
+
 
 
 });
