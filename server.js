@@ -150,15 +150,15 @@ client.on("message",message =>{
 
     let kblsys = 0;
     let redsys = 0;
-    (const kbl = (reaction, user) => reaction.emoji.name === '✅'
+    const kbl = (reaction, user) => reaction.emoji.name === '✅'
      sent.awaitReactions(kbl, { time: 60000 })
     .then(collected => kblsys += collected.size)
     .catch(console.error);
 
-   const red = (reaction, user) => reaction.emoji.name === '❌'
+    const red = (reaction, user) => reaction.emoji.name === '❌'
     sent.awaitReactions(red, { time: 60000 })
    .then(collected2 => redsys += collected2.size)
-   .catch(console.error);).then(console.log("mrb");)
+   .catch(console.error)
 
 
 
