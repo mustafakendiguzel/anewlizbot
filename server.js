@@ -154,16 +154,14 @@ client.on("message",message =>{
     const red = (reaction, user) => reaction.emoji.name === '❌'
 
      sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => kblsys += collected.size)
+    .then(collected => kblsys += collected.size; console.log(kblsys))
     .catch(console.error);
 
 
     sent.awaitReactions(red, { time: 5000 })
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
-   setTimeout(() => {
-       console.log(kblsys)
-   }, 5100)
+
 
 
 });
