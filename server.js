@@ -1,4 +1,7 @@
 require("dotenv").config();
+import { table } from 'table';
+
+
 const fetch = require("node-fetch");
 const Discord=require("discord.js");
 let client = new Discord.Client();
@@ -129,16 +132,34 @@ client.on("message",message =>{
     |  ${kisiler[3]}                ${kisiler[8]}
     |  ${kisiler[4]}                ${kisiler[9]}
     -------------------------------------|
-    console.log("mrb");
+
        `);
+       const data = [
+         ['0A', '0B', '0C'],
+         ['1A', '1B', '1C'],
+         ['2A', '2B', '2C'],
+       ];
+
+   const config = {
+     columnDefault: {
+       width: 10,
+     },
+     header: {
+       alignment: 'center',
+       content: 'THE HEADER\nThis is the table about something',
+     },
+   }
+   
+   console.log(table(data, config));
     }
+
 
 
 
    let yazankisi = message.author.username;
 
    if(cmd==='acil') {
-    let mesaj = args.join(" ")
+    let mesajnpm install table= args.join(" ")
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
