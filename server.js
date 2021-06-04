@@ -133,7 +133,7 @@ client.on("message",message =>{
     }
 
     if(cmd==='oy') {
-     cmd.react('396548322053062656');
+     message.react('396548322053062656');
 
     }
 
