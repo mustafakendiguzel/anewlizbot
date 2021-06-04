@@ -144,8 +144,9 @@ client.on("message",message =>{
 
    if (cmd === 'react') {
     console.log(args.join(" "));
+    const ayy = client.emojis.find(emoji => emoji.name === "ayy");
     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
-    sent.react('\:white_check_mark:');
+    sent.react(`${ayy}`);
 
 });
  }
