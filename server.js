@@ -143,7 +143,8 @@ client.on("message",message =>{
    }
 
    if (cmd === 'react') {
-   message.react('😄');
+    mesaj = message.channel.send("Oylama başladı");
+    mesaj.react('😄');
  }
 
    let j = 1;
