@@ -135,7 +135,7 @@ client.on("message",message =>{
     if(cmd==='oy') {
      message.channel.send("Oylama başladı");
      const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'white_check_mark');
-     message.react(`reactionEmoji`)
+     message.react(`reactionEmoji`);
 
     }
 
@@ -147,7 +147,6 @@ client.on("message",message =>{
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
-   if
 
    let j = 1;
    let argumans = [];
