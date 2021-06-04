@@ -147,7 +147,10 @@ client.on("message",message =>{
     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
-
+    const filter = (reaction, user) => reaction.emoji.name === '✅'
+     sent.awaitReactions(filter, { time: 3000 })
+   .then(collected => console.log(`Collected ${collected.size} reactions`))
+   .catch(console.error);
 
 
 
@@ -155,10 +158,7 @@ client.on("message",message =>{
 });
  }
 
- const filter = (reaction, user) => reaction.emoji.name === '✅'
-  sent.awaitReactions(filter, { time: 3000 })
-.then(collected => console.log(`Collected ${collected.size} reactions`))
-.catch(console.error);
+
 
 
    let j = 1;
