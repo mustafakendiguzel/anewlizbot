@@ -142,12 +142,12 @@ client.on("message",message =>{
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
-   if (cmd === 'react') {
+   if (cmd === 'oy') {
     console.log(args.join(" "));
-    msg = message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
+    message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
-    reactions = msg.reactions.cache;
+    reactions = sent.reactions.cache;
     if (reactions.get('✅')) {
       console.log(`mrb`);
     }
