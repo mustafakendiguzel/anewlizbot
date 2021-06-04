@@ -145,8 +145,7 @@ client.on("message",message =>{
    if (cmd === 'react') {
     message.react('😄');
     message.reply("Your stuff").then(sent => { // 'sent' is that message you just sent
-    let id = sent.id;
-    id.react('😄');
+    sent.react('😄');
 });
  }
 
