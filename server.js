@@ -132,10 +132,7 @@ client.on("message",message =>{
        `);
     }
 
-    if(cmd==='oy') {
-     message.react('396548322053062656');
 
-    }
 
 
    let yazankisi = message.author.username;
