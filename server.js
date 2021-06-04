@@ -147,11 +147,18 @@ client.on("message",message =>{
     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
-    const filter = (reaction, user) => reaction.emoji.name === '✅'
-     sent.awaitReactions(filter, { time: 3000 })
-   .then(collected => console.log(`Collected ${collected.size} reactions`))
-   .catch(console.error);
 
+    let kblsys = 0;
+    let redsys = 0;
+    (const kbl = (reaction, user) => reaction.emoji.name === '✅'
+     sent.awaitReactions(kbl, { time: 60000 })
+    .then(collected => kblsys += collected.size)
+    .catch(console.error);
+
+   const red = (reaction, user) => reaction.emoji.name === '❌'
+    sent.awaitReactions(red, { time: 60000 })
+   .then(collected2 => redsys += collected2.size)
+   .catch(console.error);).then(console.log("mrb");)
 
 
 
