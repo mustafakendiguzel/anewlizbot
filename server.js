@@ -116,33 +116,28 @@ client.on("message",message =>{
     message.channel.send(`Her tokat fatike bir teselli,tokat sayisi: ${s}`)
     s+=1
    }
-   if(cmd==='purge') {
-    message.channel.send(`?purge 3`)
-
-   }
 
     if(cmd==='valo') {
     karistir(map);
     karistir(kisiler);
     message.channel.send(`---------------map:${map[0]} ----------------
     -------Takım1-----|------Takım2------
-    |  ${kisiler[0]}                ${kisiler[5]}
-    |  ${kisiler[1]}                ${kisiler[6]}
-    |  ${kisiler[2]}                ${kisiler[7]}
-    |  ${kisiler[3]}                ${kisiler[8]}
-    |  ${kisiler[4]}                ${kisiler[9]}
-    -------------------------------------|
+    |  ${kisiler[0]}                     ${kisiler[5]}
+    |  ${kisiler[1]}                     ${kisiler[6]}
+    |  ${kisiler[2]}                     ${kisiler[7]}
+    |  ${kisiler[3]}                     ${kisiler[8]}
+    |  ${kisiler[4]}                     ${kisiler[9]}
+    ------------------------------------------
 
        `);
-       var users = [
-      {name: 'Dolly'},
-      {name: 'Molly'},
-      {name: 'Polly'},
-  ]
-   sprintf('Hello %(users[0].name)s, %(users[1].name)s and %(users[2].name)s', {users: users}) // Hello Dolly, Molly and Polly
     }
 
+    if(cmd==='oy') {
+     message.channel.send("Oylama başladı");
+     const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'white_check_mark');
+     message.react(`reactionEmoji`);
 
+    }
 
 
    let yazankisi = message.author.username;
@@ -152,13 +147,7 @@ client.on("message",message =>{
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
-
-    if(cmd==='acil') {
-    let mesaj = args.join(" ")
-    allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
-   }
-
-
+   if
 
    let j = 1;
    let argumans = [];
@@ -178,9 +167,7 @@ client.on("message",message =>{
       allUsers.forEach(e => { if(e.username.toLowerCase() == argumans[i] ) e.send(`-------------------------------------------------------------------------\n${ozelmesaj}-${yazankisi}\n-------------------------------------------------------------------------`)})
     }
    }
-  if (cmd === 'whatk') {
-    message.reply(message.author.displayAvatarURL());
-  }
+
   if(cmd==='yamur') {
     message.channel.send("Brahmanınızın biricik biraderi :p ")
   }
