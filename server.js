@@ -134,8 +134,7 @@ client.on("message",message =>{
 
     if(cmd==='oy') {
      message.channel.send("Oylama başladı");
-     const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'white_check_mark');
-     message.react(reactionEmoji);
+     message.react('396548322053062656');
 
     }
 
