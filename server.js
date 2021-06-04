@@ -144,7 +144,7 @@ client.on("message",message =>{
 
    if (cmd === 'react') {
     message.react('😄');
-    message.reply("Your stuff").then(sent => { // 'sent' is that message you just sent
+    message.send("Your stuff").then(sent => { // 'sent' is that message you just sent
     sent.react('😄');
 });
  }
