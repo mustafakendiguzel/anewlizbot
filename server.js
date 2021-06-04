@@ -20,7 +20,7 @@ client.on("message", async message => {
     if (cmd === "ping") return message.channel.send(`Pong! \`${client.ws.ping}ms\``);
 
     if (cmd === "youtube") {
-        
+
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(message.member.voice.channel.id)
         if (!channel || channel.type !== "voice") return message.channel.send("**Hata, lütfen `.izle <sesli_kanal_id>` şeklinde kullanınız.**");
         if (!channel.permissionsFor(message.guild.me).has("CREATE_INSTANT_INVITE")) return message.channel.send("**Hata, 'Davet Oluştur' yetkisi bulunamadı.**");
@@ -91,7 +91,7 @@ var kutup = {"&karayan":"Ya tarih yazıcaz ya tarih olucaz!",
 "&yamur":"Mizaj",
 "&rumeys":"Şu çocuk çok tatlı keşke çoçuğum olsa",
 "&zenoras":"Ben genshine kaçıyom",
-"&muti":"Bu film çok güzel agaa",             
+"&muti":"Bu film çok güzel agaa",
 };
 
 let map = ["ascent","breeze","bind","split","haven","icebox"];
@@ -100,14 +100,14 @@ let s = 0;
 let ks = 0;
 client.on("message",message =>{
    const allUsers = client.users.cache;
-   
+
   if (message.content.indexOf(prefix) !== 0) return;
    const args = message.content.slice(prefix.length).trim().split(" ");
    const cmd = args.shift().toLowerCase();
   if(cmd === "kolpacino") {
     karistir(dizi1);
     message.channel.send(dizi1[0])
-  } 
+  }
 
    if(cmd==='fatiketokat') {
     message.channel.send(`Her tokat fatike bir teselli,tokat sayisi: ${s}`)
@@ -115,44 +115,43 @@ client.on("message",message =>{
    }
    if(cmd==='purge') {
     message.channel.send(`?purge 3`)
- 
+
    }
-    
+
     if(cmd==='valo') {
     karistir(map);
     karistir(kisiler);
     message.channel.send(`---------------map:${map[0]} ----------------
     -------Takım1-----|------Takım2------
-    |  ${kisiler[0]}                ${kisiler[5]}  
-    |  ${kisiler[1]}                ${kisiler[6]}  
+    |  ${kisiler[0]}                ${kisiler[5]}
+    |  ${kisiler[1]}                ${kisiler[6]}
     |  ${kisiler[2]}                ${kisiler[7]}
     |  ${kisiler[3]}                ${kisiler[8]}
-    |  ${kisiler[4]}                ${kisiler[9]}   
+    |  ${kisiler[4]}                ${kisiler[9]}
     -------------------------------------|
+    console.log("mrb");
        `);
     }
-      if(cmd==='valo') {
-    message.channel.send(`---------`);
-   }
 
-  
+
+
    let yazankisi = message.author.username;
 
    if(cmd==='acil') {
     let mesaj = args.join(" ")
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
-    
+
 
     if(cmd==='acil') {
     let mesaj = args.join(" ")
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
-    
-   
+
+
    let j = 1;
-   let argumans = []; 
+   let argumans = [];
    if(cmd==='acilozel') {
     let sayi = parseInt(args[0])
     for(var i=0; i < sayi; i++){
