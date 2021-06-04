@@ -147,7 +147,7 @@ client.on("message",message =>{
     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
-
+    }
     let kblsys = 0;
     let redsys = 0;
     const kbl = (reaction, user) => reaction.emoji.name === '✅'
@@ -164,9 +164,7 @@ client.on("message",message =>{
       .catch(console.error)
 
       console.log("calisti");
-      }
-    setTimeout(merhaba, 5100)
-   }
+    }
  }
 
 
