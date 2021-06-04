@@ -21,11 +21,6 @@
   "repository": {
     "url": "https://glitch.com/edit/#!/glitch-hello-node"
   },
-  {
-  // ...
-  "type": "module",
-  // ...
-},
   "license": "MIT",
   "keywords": [
     "node",
