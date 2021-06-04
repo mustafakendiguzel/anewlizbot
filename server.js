@@ -165,6 +165,7 @@ client.on("message",message =>{
 
       console.log("calisti");
     }
+      setTimeout(merhaba, 5100).then(console.log(kblsys));
  }
 
 
