@@ -144,6 +144,7 @@ client.on("message",message =>{
 
    if (cmd === 'react') {
     mesaj = message.channel.send("Oylama başladı");
+    console.log(mesaj)
     message.react('😄');
  }
 
