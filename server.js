@@ -150,20 +150,22 @@ client.on("message",message =>{
 
     let kblsys = 0;
     let redsys = 0;
-    const kbl = (reaction, user) => reaction.emoji.name === '✅'
-    const red = (reaction, user) => reaction.emoji.name === '❌'
-
-     (sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => kblsys += collected.size)
-    .catch(console.error);
 
 
-    sent.awaitReactions(red, { time: 5000 })
-   .then(collected2 => redsys += collected2.size)
-   .catch(console.error)).then(console.log(kblsys))
-
-
-
+   const filter_age = (reaction, user) => {
+        return reaction.emoji.name === '✅' || reaction.emoji.name === '❌' && user.id === message.author.id && !user.bot;
+    }
+    const collector_age = msg.createReactionCollector(filter_age, {
+             time: 3000,
+    });
+    collector_age.on('collect', async (reaction, user) => {
+        if (reaction.emoji.name === '✅') {
+          kblsys +=1;
+       }
+       else {
+          redsys +=1
+       }
+    console.log(kblsys);
 });
  }
 
