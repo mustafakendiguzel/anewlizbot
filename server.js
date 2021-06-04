@@ -144,8 +144,7 @@ client.on("message",message =>{
 
    if (cmd === 'oy') {
     console.log(args.join(" "));
-    let sent;
-    message.reply("Oylama başlatıldı").then(sent = sent => { // 'sent' is that message you just sent
+    message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
   })
@@ -154,23 +153,14 @@ client.on("message",message =>{
     const kbl = (reaction, user) => reaction.emoji.name === '✅'
     const red = (reaction, user) => reaction.emoji.name === '❌'
 
-    function first() {
-    setTimeout(function() {
-          sent.awaitReactions(kbl, { time: 5000 })
-         .then(collected => kblsys += collected.size)
-         .catch(console.error);
+     sent.awaitReactions(kbl, { time: 5000 })
+    .then(collected => kblsys += collected.size )
+    .catch(console.error);
 
-         sent.awaitReactions(red, { time: 5000 })
-        .then(collected2 => redsys += collected2.size)
-        .catch(console.error)
-        second();
-    }, 5100);
-}
-    function second() {
-      console.log(kblsys);
-    }
 
-    first();
+    sent.awaitReactions(red, { time: 5000 })
+   .then(collected2 => redsys += collected2.size)
+   .catch(console.error)
  }
 
 
