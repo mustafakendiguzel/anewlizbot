@@ -146,6 +146,10 @@ client.on("message",message =>{
     mesaj = message.channel.send("Oylama başladı");
     console.log(mesaj.id)
     message.react('😄');
+    message.reply("Your stuff").then(sent => { // 'sent' is that message you just sent
+    let id = sent.id;
+    console.log(id);
+});
  }
 
    let j = 1;
