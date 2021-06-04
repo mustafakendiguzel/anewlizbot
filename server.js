@@ -1,5 +1,4 @@
 require("dotenv").config();
-import { table } from 'table';
 
 
 const fetch = require("node-fetch");
@@ -149,7 +148,7 @@ client.on("message",message =>{
        content: 'THE HEADER\nThis is the table about something',
      },
    }
-   
+
    console.log(table(data, config));
     }
 
