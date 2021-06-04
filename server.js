@@ -158,7 +158,7 @@ client.on("message",message =>{
    let yazankisi = message.author.username;
 
    if(cmd==='acil') {
-    let mesajnpm install table= args.join(" ")
+    let mesaj = args.join(" ")
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
