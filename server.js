@@ -149,7 +149,7 @@ client.on("message",message =>{
     sent.react('❌');
     reactions = sent.reactions.cache;
     console.log(`${reactions.get('✅')}`)
-    }
+
 
 });
  }
