@@ -144,7 +144,7 @@ client.on("message",message =>{
 
    if (cmd === 'react') {
     console.log(args.join(" "));
-    msj message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
+    msj = message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
     if (msj.get('✅')) {
