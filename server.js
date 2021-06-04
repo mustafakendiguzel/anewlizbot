@@ -148,27 +148,28 @@ client.on("message",message =>{
     sent.react('✅');
     sent.react('❌');
 
-    let kblsys = 0;
-    let redsys = 0;
 
 
-   const filter_age = (reaction, user) => {
-        return reaction.emoji.name === '✅' || reaction.emoji.name === '❌' && user.id === message.author.id && !user.bot;
-    }
-    const collector_age = msg.createReactionCollector(filter_age, {
-             time: 3000,
-    });
-    collector_age.on('collect', async (reaction, user) => {
-        if (reaction.emoji.name === '✅') {
-          kblsys +=1;
-       }
-       else {
-          redsys +=1
-       }
-    console.log(kblsys);
-});
  }
 
+ let kblsys = 0;
+ let redsys = 0;
+
+ const filter_age = (reaction, user) => {
+      return reaction.emoji.name === '✅' || reaction.emoji.name === '❌' && user.id === message.author.id && !user.bot;
+  }
+  const collector_age = msg.createReactionCollector(filter_age, {
+           time: 3000,
+  });
+  collector_age.on('collect', async (reaction, user) => {
+      if (reaction.emoji.name === '✅') {
+        kblsys +=1;
+     }
+     else {
+        redsys +=1
+     }
+  console.log(kblsys);
+});
 
 
 
