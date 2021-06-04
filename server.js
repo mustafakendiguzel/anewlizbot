@@ -148,7 +148,7 @@ client.on("message",message =>{
     sent.react('✅');
     sent.react('❌');
     if (msj.get('✅')) {
-      console.log(`mrb ${msj.get('✅')}`);
+      console.log(`mrb`);
     }
 
 });
