@@ -152,14 +152,14 @@ client.on("message",message =>{
     let redsys = 0;
     const kbl = (reaction, user) => reaction.emoji.name === '✅'
      sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => console.log("mrb"))
+    .then(collected => kblsys += collected.size)
     .catch(console.error);
 
     const red = (reaction, user) => reaction.emoji.name === '❌'
     sent.awaitReactions(red, { time: 60000 })
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
-
+   console.log(kblsys)
 
 
 });
