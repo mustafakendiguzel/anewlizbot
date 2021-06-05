@@ -162,11 +162,8 @@ client.on("message",message =>{
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
      })
-     function merhaba(){
-     console.log(kblsys);
-  }
-  
-  setTimeout(merhaba, 5100);
+     setTimeout(function(){ console.log(kblsys); }, 5100);
+
  }
 
 
