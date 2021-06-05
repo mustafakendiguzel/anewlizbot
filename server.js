@@ -143,7 +143,7 @@ client.on("message",message =>{
     let redsys = 0;
     const kbl = (reaction, user) => reaction.emoji.name === '✅'
     const red = (reaction, user) => reaction.emoji.name === '❌'
-  function first() {
+
     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
@@ -157,14 +157,6 @@ client.on("message",message =>{
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
      })
-     setTimeout(merhaba,5100)
-  }
-     function merhaba(){
-
-     console.log(kblsys);
-  }
-  first()
-
 
  }
 
