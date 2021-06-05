@@ -112,11 +112,6 @@ client.on("message",message =>{
     message.channel.send(dizi1[0])
   }
 
-   if(cmd==='fatiketokat') {
-    message.channel.send(`Her tokat fatike bir teselli,tokat sayisi: ${s}`)
-    s+=1
-   }
-
     if(cmd==='valo') {
     karistir(map);
     karistir(kisiler);
@@ -148,7 +143,7 @@ client.on("message",message =>{
     let redsys = 0;
     const kbl = (reaction, user) => reaction.emoji.name === '✅'
     const red = (reaction, user) => reaction.emoji.name === '❌'
-
+  function first() {
     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
     sent.react('✅');
     sent.react('❌');
@@ -162,7 +157,13 @@ client.on("message",message =>{
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
      })
-     setTimeout(function(){ console.log(kblsys); }, 5100);
+     merhaba()
+  }
+     function merhaba(){
+     console.log(kblsys);
+  }
+  first()
+
 
  }
 
