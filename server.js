@@ -171,7 +171,7 @@ client.on("message",message =>{
    await msg.react('✅');
    await msg.react('❌');
 
-   const reactions = await msg.awaitReactions(reaction => reaction.emoji.name = '✅' || reaction.emoji.name = '❌', {time:5000});
+   const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === '✅' || reaction.emoji.name === '❌', {time:5000});
    message.channel.send(`Oylama tamamlandı red sayısı: ${reactions.get(red).count}`)
  }
 
