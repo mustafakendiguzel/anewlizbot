@@ -162,16 +162,16 @@ client.on("message",message =>{
   }
  })
 
-
+ const kbl =  '✅'
+ const red =  '❌'
+   
  module.exports.run = async (bot,message,args) => {
-   const kbl =  '✅'
-   const red =  '❌'
 
    let msg = await message.channel.send('oy');
-   await msg.react('✅');
-   await msg.react('❌');
+   await msg.react(kbl);
+   await msg.react(red);
 
-   const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === '✅' || reaction.emoji.name === '❌', {time:5000});
+   const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === kbl || reaction.emoji.name === red, {time:5000});
    message.channel.send(`Oylama tamamlandı red sayısı: ${reactions.get(red).count}`)
  }
  module.exports.help = {
