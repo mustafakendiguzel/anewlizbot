@@ -137,20 +137,6 @@ client.on("message",message =>{
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
-    const kbl =  '✅'
-    const red =  '❌'
-
-    let msg = await message.channel.send('oy');
-    await msg.react('✅');
-    await msg.react('❌');
-
-    const reactions = await msg.awaitReactions(reaction => reaction.emoji.name = '✅' || reaction.emoji.name = '❌', {time:5000});
-    message.channel.send(`Oylama tamamlandı red sayısı: ${reactions.get('❌').count}`)
-
-
-
-
-
 
    let j = 1;
    let argumans = [];
@@ -175,5 +161,18 @@ client.on("message",message =>{
     message.channel.send("Brahmanınızın biricik biraderi :p ")
   }
  })
+
+
+ module.export.run = async (bot,message,args) => {
+   const kbl =  '✅'
+   const red =  '❌'
+
+   let msg = await message.channel.send('oy');
+   await msg.react('✅');
+   await msg.react('❌');
+
+   const reactions = await msg.awaitReactions(reaction => reaction.emoji.name = '✅' || reaction.emoji.name = '❌', {time:5000});
+   message.channel.send(`Oylama tamamlandı red sayısı: ${reactions.get(red).count}`)
+ }
 
 client.login("ODM1NDgxMDQ2MjA3NTYxNzY4.YIQEWw.CxweRR9hRW6k0pQviE8jsH27iEc");
