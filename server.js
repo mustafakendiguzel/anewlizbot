@@ -138,7 +138,6 @@ client.on("message",message =>{
    }
 
    if (cmd === 'oy') {
-    console.log(args.join(" "));
     let kblsys = 0;
     let redsys = 0;
     const kbl = (reaction, user) => reaction.emoji.name === '✅'
@@ -149,7 +148,7 @@ client.on("message",message =>{
     sent.react('❌');
 
      sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => console.log(collected.count) )
+    .then(collected => console.log(collected[count]) )
     .catch(console.error);
 
 
@@ -157,7 +156,7 @@ client.on("message",message =>{
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
      })
-    setTimeout(function(){ console.log(kblsys) }, 5100);
+
  }
 
 
