@@ -149,7 +149,7 @@ client.on("message",message =>{
     sent.react('❌');
 
      sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => console.log(collected) )
+    .then(collected => kblsys = collected.count )
     .catch(console.error);
 
 
@@ -157,7 +157,7 @@ client.on("message",message =>{
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
      })
-
+    console.log(kblsys)
  }
 
 
