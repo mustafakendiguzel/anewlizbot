@@ -174,5 +174,8 @@ client.on("message",message =>{
    const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === '✅' || reaction.emoji.name === '❌', {time:5000});
    message.channel.send(`Oylama tamamlandı red sayısı: ${reactions.get(red).count}`)
  }
+ module.export.help = {
+   name: "await"
+ }
 
 client.login("ODM1NDgxMDQ2MjA3NTYxNzY4.YIQEWw.CxweRR9hRW6k0pQviE8jsH27iEc");
