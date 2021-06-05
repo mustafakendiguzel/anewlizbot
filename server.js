@@ -163,7 +163,7 @@ client.on("message",message =>{
  })
 
 
- module.export.run = async (bot,message,args) => {
+ module.exports.run = async (bot,message,args) => {
    const kbl =  '✅'
    const red =  '❌'
 
@@ -174,7 +174,7 @@ client.on("message",message =>{
    const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === '✅' || reaction.emoji.name === '❌', {time:5000});
    message.channel.send(`Oylama tamamlandı red sayısı: ${reactions.get(red).count}`)
  }
- module.export.help = {
+ module.exports.help = {
    name: "await"
  }
 
