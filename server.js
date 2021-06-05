@@ -157,7 +157,7 @@ client.on("message",message =>{
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
      })
-    console.log(kblsys)
+    setTimeout(function(){ console.log(kblsys) }, 5100);
  }
 
 
