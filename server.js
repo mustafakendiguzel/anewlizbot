@@ -157,9 +157,10 @@ client.on("message",message =>{
    .then(collected2 => redsys += collected2.size)
    .catch(console.error)
      })
-     merhaba()
+     setTimeout(merhaba,5100)
   }
      function merhaba(){
+
      console.log(kblsys);
   }
   first()
