@@ -137,27 +137,17 @@ client.on("message",message =>{
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
 
-   if (cmd === 'oy') {
-    let kblsys = 0;
-    let redsys = 0;
-    const kbl = (reaction, user) => reaction.emoji.name === '✅'
-    const red = (reaction, user) => reaction.emoji.name === '❌'
+    const kbl =  '✅'
+    const red =  '❌'
 
-    message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
-    sent.react('✅');
-    sent.react('❌');
+    let msg = await message.channel.send('oy');
+    await msg.react('✅');
+    await msg.react('❌');
 
-     reaction = sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => console.log(reaction.get('✅').count))
-    .catch(console.error);
+    const reactions = await msg.awaitReactions(reaction => reaction.emoji.name = '✅' || reaction.emoji.name = '❌', {time:5000});
+    message.channel.send(`Oylama tamamlandı red sayısı: ${reactions.get('❌').count}`)
 
 
-    sent.awaitReactions(red, { time: 5000 })
-   .then(collected2 => redsys += collected2.size)
-   .catch(console.error)
-     })
-
- }
 
 
 
