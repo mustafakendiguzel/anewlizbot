@@ -148,7 +148,7 @@ client.on("message",message =>{
     sent.react('❌');
 
      sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => console.log(Array.from(collected.keys()).messageReaction))
+    .then(collected => console.log(Array.from(collected.values())))
     .catch(console.error);
 
 
