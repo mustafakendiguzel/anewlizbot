@@ -164,10 +164,10 @@ client.on("message",message =>{
 
  const kbl =  '✅'
  const red =  '❌'
-   
+
  module.exports.run = async (bot,message,args) => {
 
-   let msg = await message.channel.send('oy');
+   let msg = await message.channel.send("oy");
    await msg.react(kbl);
    await msg.react(red);
 
