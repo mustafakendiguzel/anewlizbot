@@ -160,31 +160,32 @@ client.on("message",message =>{
   if(cmd==='yamur') {
     message.channel.send("Brahmanınızın biricik biraderi :p ")
   }
+
+  if (cmd === 'oy') {
+    console.log(args.join(" "));
+    let kblsys = 0;
+    let redsys = 0;
+
+    const kbl = (reaction, user) => reaction.emoji.name === '✅'
+    const red = (reaction, user) => reaction.emoji.name === '❌'
+
+      message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
+      sent.react('✅');
+      sent.react('❌');
+
+      sent.awaitReactions(kbl, { time: 5000 })
+       .then(collected => console.log(collected.count) )
+        .catch(console.error);
+
+        sent.awaitReactions(red, { time: 5000 })
+         .then(collected => console.log(collected.count) )
+          .catch(console.error);
+    })
  })
 
- if (cmd === 'oy') {
-   console.log(args.join(" "));
-   let kblsys = 0;
-   let redsys = 0;
-
-   const kbl = (reaction, user) => reaction.emoji.name === '✅'
-   const red = (reaction, user) => reaction.emoji.name === '❌'
-
-     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
-     sent.react('✅');
-     sent.react('❌');
-
-     sent.awaitReactions(kbl, { time: 5000 })
-      .then(collected => console.log(collected.count) )
-       .catch(console.error);
-
-       sent.awaitReactions(red, { time: 5000 })
-        .then(collected => console.log(collected.count) )
-         .catch(console.error);
-   })
 
 
- }
+
 
 
 
