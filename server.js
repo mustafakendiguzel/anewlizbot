@@ -173,15 +173,17 @@ client.on("message",message =>{
      message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
      sent.react('✅');
      sent.react('❌');
-   })
 
-   sent.awaitReactions(kbl, { time: 5000 })
-    .then(collected => console.log(collected.count) )
-     .catch(console.error);
-
-     sent.awaitReactions(red, { time: 5000 })
+     sent.awaitReactions(kbl, { time: 5000 })
       .then(collected => console.log(collected.count) )
        .catch(console.error);
+
+       sent.awaitReactions(red, { time: 5000 })
+        .then(collected => console.log(collected.count) )
+         .catch(console.error);
+   })
+
+
  }
 
 
