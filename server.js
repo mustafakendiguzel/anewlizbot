@@ -180,14 +180,9 @@ client.on("message",message =>{
         sent.awaitReactions(red, { time: 5000 })
          .then(collected => console.log(collected.count) )
           .catch(console.error);
-    })
- }
-
-
-
-
-
-
+        })
+    }
+  })
 
 
 
