@@ -162,20 +162,30 @@ client.on("message",message =>{
   }
  })
 
- const kbl =  '✅'
- const red =  '❌'
+ if (cmd === 'oy') {
+   console.log(args.join(" "));
+   let kblsys = 0;
+   let redsys = 0;
 
- module.exports.run = async (bot,message,args) => {
+   const kbl = (reaction, user) => reaction.emoji.name === '✅'
+   const red = (reaction, user) => reaction.emoji.name === '❌'
 
-   let msg = await message.channel.send("oy");
-   await msg.react(kbl);
-   await msg.react(red);
+     message.reply("Oylama başlatıldı").then(sent => { // 'sent' is that message you just sent
+     sent.react('✅');
+     sent.react('❌');
+   })
 
-   const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === kbl || reaction.emoji.name === red, {time:5000});
-   message.channel.send(`Oylama tamamlandı red sayısı: ${reactions.get(red).count}`)
+   sent.awaitReactions(kbl, { time: 5000 })
+    .then(collected => console.log(collected.count) )
+     .catch(console.error);
+
+     sent.awaitReactions(red, { time: 5000 })
+      .then(collected => console.log(collected.count) )
+       .catch(console.error);
  }
- module.exports.help = {
-   name: "await"
- }
+
+
+
+
 
 client.login("ODM1NDgxMDQ2MjA3NTYxNzY4.YIQEWw.CxweRR9hRW6k0pQviE8jsH27iEc");
