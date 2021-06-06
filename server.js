@@ -181,7 +181,7 @@ client.on("message",message =>{
          .then(collected => console.log(collected.count) )
           .catch(console.error);
     })
- })
+ }
 
 
 
