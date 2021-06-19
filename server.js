@@ -1,7 +1,6 @@
 require("dotenv").config();
 var sprintf = require('sprintf-js').sprintf,
 vsprintf = require('sprintf-js').vsprintf
-const config = require('./config.json');
 const fetch = require("node-fetch");
 const Discord=require("discord.js");
 let client = new Discord.Client();
@@ -189,4 +188,4 @@ client.on("message",message =>{
   })
 
 
-client.login(config.token)
+client.login(process.env.BOTTOKEN)
