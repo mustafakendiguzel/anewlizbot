@@ -188,4 +188,4 @@ client.on("message",message =>{
   })
 
 
-client.login("ODM1NDgxMDQ2MjA3NTYxNzY4.YIQEWw.pFdivBkc84hpXADLx8Axjr8ptGg")
+client.login(process.env.BOTTOKEN)
