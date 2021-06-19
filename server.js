@@ -137,7 +137,7 @@ client.on("message",message =>{
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
      if(cmd==='rastgele') {
-      rastgele(kisiler);
+      karistir(kisiler);
       message.channel.send(`${kisiler[3]}`)
    }
 
