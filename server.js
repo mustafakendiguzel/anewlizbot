@@ -1,11 +1,11 @@
 require("dotenv").config();
 var sprintf = require('sprintf-js').sprintf,
 vsprintf = require('sprintf-js').vsprintf
-
+const config = require('./config.json');
 const fetch = require("node-fetch");
 const Discord=require("discord.js");
 let client = new Discord.Client();
-const prefix = "&";
+
 
 
 
@@ -189,5 +189,4 @@ client.on("message",message =>{
   })
 
 
-
-client.login("ODM1NDgxMDQ2MjA3NTYxNzY4.YIQEWw.CxweRR9hRW6k0pQviE8jsH27iEc");
+client.login(config.token)
