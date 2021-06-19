@@ -186,6 +186,6 @@ client.on("message",message =>{
         })
     }
   })
-
+console.log();
 
 client.login(process.env.BOTTOKEN)
