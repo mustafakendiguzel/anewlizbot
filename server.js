@@ -136,6 +136,10 @@ client.on("message",message =>{
     let mesaj = args.join(" ")
     allUsers.forEach(e => { if(!e.bot ) e.send(`${mesaj} -${yazankisi}`)})
    }
+     if(cmd==='rastgele') {
+      rastgele(kisiler);
+      message.channel.send(`${kisiler[3]}`)
+   }
 
 
    let j = 1;
